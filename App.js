@@ -9,7 +9,7 @@ import Header from './src/components/header';
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.viewStyle}>
         <Header />
         <Text style={styles.welcome}>
           Welcome to React Native!
@@ -23,11 +23,9 @@ export default class App extends Component<{}> {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  viewStyle: {
     backgroundColor: '#F5FCFF',
+    flex:1,
   },
   welcome: {
     fontSize: 20,
