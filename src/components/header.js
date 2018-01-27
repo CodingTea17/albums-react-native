@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import { Text, } from 'react-native';
 
 const Header = () => {
-  return <Text>I am up top</Text>;
+  const { textStyle } = styles;
+
+  return <Text style={textStyle}>I am up top</Text>;
+}
+
+const styles = {
+  textStyle: {
+    fontSize: 20
+  }
 }
 
 export default Header;
