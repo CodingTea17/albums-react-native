@@ -10,7 +10,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.viewStyle}>
-        <Header />
+        <Header heading="I am a prop!"/>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
