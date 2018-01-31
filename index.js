@@ -8,7 +8,7 @@ const App = () => (
     <Header heading={'Albums'} />
     <AlbumList />
   </View>
-)
+);
 
 AppRegistry.registerComponent('albums', () => App);
 
