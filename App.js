@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Header from './src/components/header';
+import Header from './src/components/Header';
 
 export default class App extends Component<{}> {
   render() {
