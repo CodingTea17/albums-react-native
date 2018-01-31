@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 class AlbumList extends Component {
+  state = {
+    albums: []
+  };
+
   componentWillMount() {
     fetch('https://rallycoding.herokuapp.com/api/music_albums', {
       method: 'GET',
@@ -12,7 +16,7 @@ class AlbumList extends Component {
     })
     .then((res) => {
       // The albums are stored in _bodyText
-      console.log(JSON.parse(res._bodyText));
+      this.setState({ albums: JSON.parse(res._bodyText)});
     });
   }
 
@@ -20,6 +24,7 @@ class AlbumList extends Component {
     return (
       <View>
         <Text>Albums</Text>
+        { this.state.albums.forEach((album) => { console.log(album.title)}) }
       </View>
     );
   }
