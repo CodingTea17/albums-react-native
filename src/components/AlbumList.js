@@ -20,11 +20,18 @@ class AlbumList extends Component {
     });
   }
 
+  renderAlbums() {
+    return (
+      this.state.albums.map(album =>
+        <Text key={album.title}>{album.title}</Text>
+      )
+    );
+  }
+
   render() {
     return (
       <View>
-        <Text>Albums</Text>
-        { this.state.albums.forEach((album) => { console.log(album.title)}) }
+        { this.renderAlbums() }
       </View>
     );
   }
